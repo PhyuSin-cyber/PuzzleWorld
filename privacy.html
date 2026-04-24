@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Privacy Policy - PuzzleWorld</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/privacy.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">🧩 <span class="logo-text">PuzzleWorld</span></a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+            <label for="dropdown-toggle" class="dropbtn">
+                <span>Play Game</span>
+                <span class="arrow">▾</span>
+            </label>
+            <div class="dropdown-content">
+                <a href="easy.html">Easy</a>
+                <a href="medium.html">Medium</a>
+                <a href="hard.html">Hard</a>
+            </div>
+        </div>
+
+        <a href="howtoplay.html">How to Play</a>
+        <a href="settings.html">Settings</a>
+        <a href="statistics.html">Statistics</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- Privacy Policy Section -->
+<section class="privacy-container">
+    <div class="page-header">
+        <h1>🔒 Privacy Policy</h1>
+        <p class="subtitle">Last updated: March 1, 2026</p>
+    </div>
+
+    <div class="policy-content">
+        <!-- Quick Overview -->
+        <div class="overview-box">
+            <div class="overview-items">
+                <span class="overview-item">✅ No personal data collected</span>
+                <span class="overview-item">🚫 No tracking cookies</span>
+                <span class="overview-item">📊 No analytics</span>
+                <span class="overview-item">💾 All data stays on your device</span>
+            </div>
+        </div>
+
+        <!-- Data Storage -->
+        <div class="policy-section">
+            <h2>📊 Game Statistics</h2>
+            <p>Your game progress (completion times, move counts, history) is stored <strong>only in your browser's local storage</strong>. This data never leaves your device and is not accessible to us.</p>
+        </div>
+
+        <!-- No Data Collection -->
+        <div class="policy-section">
+            <h2>🚫 No Data Collection</h2>
+            <p>We do not collect any personal information, usage data, or analytics. No tracking cookies are used. Your privacy is fully respected.</p>
+        </div>
+
+        <!-- Third-Party Services -->
+        <div class="policy-section">
+            <h2>🔌 Third-Party Services</h2>
+            <p>Puzzle images may be loaded from external sources, but no personal data is shared. No analytics or advertising services are used.</p>
+        </div>
+
+        <!-- Children's Privacy -->
+        <div class="policy-section">
+            <h2>👶 Children's Privacy</h2>
+            <p>Our website is safe for all ages. We do not collect any information from anyone, including children under 13.</p>
+        </div>
+
+        <!-- Your Control -->
+        <div class="policy-section">
+            <h2>⚙️ Your Control</h2>
+            <p>You can clear all saved data anytime using the "Clear All Statistics" button on the Statistics page, or by clearing your browser's storage.</p>
+        </div>
+
+        <!-- Policy Changes -->
+        <div class="policy-section">
+            <h2>📝 Changes to This Policy</h2>
+            <p>Any policy changes will be posted here with an updated "Last updated" date. Your continued use of PuzzleWorld constitutes acceptance of any changes.</p>
+        </div>
+
+        <!-- Contact -->
+        <div class="policy-section">
+            <h2>📬 Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please visit our <a href="about.html" class="policy-link">About page</a> and send us a message.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-links">
+        <a href="privacy.html" class="active">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="about.html">About</a>
+    </div>
+    <div class="footer-bottom">
+        © 2026 PuzzleWorld
+    </div>
+</footer>
+
+<script src="js/settings.js"></script>
+<script>
+    // Apply theme on page load
+    (function() {
+        function applyTheme() {
+            let theme = 'original';
+            try {
+                const saved = localStorage.getItem('puzzleworld_settings');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    theme = parsed.theme || 'original';
+                }
+            } catch(e) {
+                theme = 'original';
+            }
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.body.classList.remove('original-theme');
+            } else {
+                document.body.classList.add('original-theme');
+                document.body.classList.remove('dark-theme');
+            }
+        }
+        
+        applyTheme();
+        
+        window.addEventListener('settingsChanged', function(e) {
+            if (e.detail && e.detail.theme) {
+                if (e.detail.theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    document.body.classList.remove('original-theme');
+                } else {
+                    document.body.classList.add('original-theme');
+                    document.body.classList.remove('dark-theme');
+                }
+            }
+        });
+        
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'puzzleworld_settings') {
+                try {
+                    const newSettings = JSON.parse(e.newValue);
+                    if (newSettings && newSettings.theme === 'dark') {
+                        document.body.classList.add('dark-theme');
+                        document.body.classList.remove('original-theme');
+                    } else {
+                        document.body.classList.add('original-theme');
+                        document.body.classList.remove('dark-theme');
+                    }
+                } catch(err) {}
+            }
+        });
+    })();
+</script>
+
+</body>
+</html>

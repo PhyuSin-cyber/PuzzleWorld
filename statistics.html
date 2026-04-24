@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Statistics - PuzzleWorld</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/statistics.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">🧩 <span class="logo-text">PuzzleWorld</span></a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+            <label for="dropdown-toggle" class="dropbtn">
+                <span>Play Game</span>
+                <span class="arrow">▾</span>
+            </label>
+            <div class="dropdown-content">
+                <a href="easy.html">Easy</a>
+                <a href="medium.html">Medium</a>
+                <a href="hard.html">Hard</a>
+            </div>
+        </div>
+
+        <a href="howtoplay.html">How to Play</a>
+        <a href="settings.html">Settings</a>
+        <a href="statistics.html" class="active">Statistics</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- Statistics Section -->
+<section class="statistics-container">
+    <div class="page-header">
+        <h1>📊 Game Statistics</h1>
+        <p class="subtitle">Track your puzzle progress across all difficulties</p>
+    </div>
+    
+    <!-- Difficulty Tabs -->
+    <div class="stat-tabs">
+        <button class="tab-btn active" onclick="switchDifficulty('easy')">Easy (3x3)</button>
+        <button class="tab-btn" onclick="switchDifficulty('medium')">Medium (4x4)</button>
+        <button class="tab-btn" onclick="switchDifficulty('hard')">Hard (6x6)</button>
+    </div>
+
+    <!-- Statistics Overview - 3 cards -->
+    <div class="stats-overview">
+        <div class="stat-card">
+            <div class="stat-icon">🎮</div>
+            <div class="stat-info">
+                <span class="stat-label">Games Played</span>
+                <span class="stat-value" id="totalGames">0</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-info">
+                <span class="stat-label">Best Time</span>
+                <span class="stat-value" id="bestTime">00:00</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🔄</div>
+            <div class="stat-info">
+                <span class="stat-label">Avg Moves</span>
+                <span class="stat-value" id="avgMoves">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recent Games Table -->
+    <div class="recent-games">
+        <h2>📋 Recent Games</h2>
+        <div class="table-container">
+            <table id="recentGamesTable">
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Difficulty</th>
+                        <th>Time</th>
+                        <th>Moves</th>
+                    </tr>
+                </thead>
+                <tbody id="gamesTableBody">
+                    <tr>
+                        <td colspan="4" class="no-data">No games played yet</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="stat-actions">
+        <button onclick="clearCurrentDifficultyStats()" class="danger-btn" id="clearCurrentBtn">🗑️ Clear Current Stats</button>
+        <button onclick="clearAllStats()" class="danger-btn">⚠️ Clear All Statistics</button>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Confirm Action</h3>
+            <p id="modalMessage">Are you sure?</p>
+            <div class="modal-buttons">
+                <button onclick="confirmAction()" class="confirm-btn">Yes</button>
+                <button onclick="closeModal()" class="cancel-btn">No</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="about.html">About</a>
+    </div>
+    <div class="footer-bottom">
+        © 2026 PuzzleWorld
+    </div>
+</footer>
+
+<script src="js/statistics.js"></script>
+<script src="js/settings.js"></script>
+<script>
+    // Apply theme on page load
+    (function() {
+        function applyTheme() {
+            let theme = 'original';
+            try {
+                const saved = localStorage.getItem('puzzleworld_settings');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    theme = parsed.theme || 'original';
+                }
+            } catch(e) {
+                theme = 'original';
+            }
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.body.classList.remove('original-theme');
+            } else {
+                document.body.classList.add('original-theme');
+                document.body.classList.remove('dark-theme');
+            }
+        }
+        
+        applyTheme();
+        
+        window.addEventListener('settingsChanged', function(e) {
+            if (e.detail && e.detail.theme) {
+                if (e.detail.theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    document.body.classList.remove('original-theme');
+                } else {
+                    document.body.classList.add('original-theme');
+                    document.body.classList.remove('dark-theme');
+                }
+            }
+        });
+        
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'puzzleworld_settings') {
+                try {
+                    const newSettings = JSON.parse(e.newValue);
+                    if (newSettings && newSettings.theme === 'dark') {
+                        document.body.classList.add('dark-theme');
+                        document.body.classList.remove('original-theme');
+                    } else {
+                        document.body.classList.add('original-theme');
+                        document.body.classList.remove('dark-theme');
+                    }
+                } catch(err) {}
+            }
+        });
+    })();
+</script>
+
+</body>
+</html>

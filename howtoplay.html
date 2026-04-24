@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>How to Play - PuzzleWorld</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/howtoplay.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">🧩 <span class="logo-text">PuzzleWorld</span></a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+            <label for="dropdown-toggle" class="dropbtn">
+                <span>Play Game</span>
+                <span class="arrow">▾</span>
+            </label>
+            <div class="dropdown-content">
+                <a href="easy.html">Easy</a>
+                <a href="medium.html">Medium</a>
+                <a href="hard.html">Hard</a>
+            </div>
+        </div>
+
+        <a href="howtoplay.html" class="active">How to Play</a>
+        <a href="settings.html">Settings</a>
+        <a href="statistics.html">Statistics</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- How to Play Section -->
+<section class="howtoplay-container">
+    <div class="page-header">
+        <h1>📖 How to Play PuzzleWorld</h1>
+        <p class="subtitle">Master the art of puzzle solving with these simple steps</p>
+    </div>
+
+    <!-- Quick Guide Cards -->
+    <div class="guide-grid">
+        <div class="guide-card">
+            <div class="guide-icon">🎯</div>
+            <h3>1. Choose Difficulty</h3>
+            <p>Select from Easy (3x3), Medium (4x4), or Hard (6x6) to match your skill level.</p>
+        </div>
+
+        <div class="guide-card">
+            <div class="guide-icon">✋</div>
+            <h3>2. Drag & Drop</h3>
+            <p>Click and drag pieces from the tray to the board. Position them in the correct spot.</p>
+        </div>
+
+        <div class="guide-card">
+            <div class="guide-icon">🎯</div>
+            <h3>3. Snap to Place</h3>
+            <p>Pieces will automatically snap into position when close to their correct spot.</p>
+        </div>
+
+        <div class="guide-card">
+            <div class="guide-icon">🏆</div>
+            <h3>4. Complete & Win</h3>
+            <p>Place all pieces correctly to complete the puzzle and save your record!</p>
+        </div>
+    </div>
+
+    <!-- Detailed Instructions -->
+    <div class="instructions-section">
+        <h2>📝 Detailed Instructions</h2>
+        
+        <div class="instruction-block">
+            <h3>🎮 Getting Started</h3>
+            <p>When you first open a puzzle, all pieces are shuffled randomly in the tray at the bottom. The board shows an empty grid with a faint outline of where pieces should go. Your goal is to move all pieces from the tray to their correct positions on the board.</p>
+        </div>
+
+        <div class="instruction-block">
+            <h3>🖱️ Moving Pieces</h3>
+            <p>To move a piece, simply click and hold on it, then drag it to the board. You can drag pieces from the tray directly to the board, or move pieces already on the board to adjust their position. The piece will follow your cursor until you release it.</p>
+        </div>
+
+        <div class="instruction-block">
+            <h3>✨ Snap Feature</h3>
+            <p>When you release a piece near its correct position, it will automatically snap into place. This makes it easy to position pieces accurately. If you release a piece far from its correct spot, it will return to the tray.</p>
+        </div>
+
+        <div class="instruction-block">
+            <h3>⏱️ Timer & Moves</h3>
+            <p>The timer starts automatically when you move your first piece. Every time you release a piece (whether correct or not), your move count increases. Try to complete puzzles in the shortest time with the fewest moves!</p>
+        </div>
+
+        <div class="instruction-block">
+            <h3>⏸️ Pause Feature</h3>
+            <p>Need a break? Click the Pause button to freeze the timer and prevent any piece movement. Click Resume to continue where you left off.</p>
+        </div>
+
+        <div class="instruction-block">
+            <h3>🔄 New Game</h3>
+            <p>Click the "New Game" button at any time to shuffle the pieces and start over. This will reset your timer and move count.</p>
+        </div>
+    </div>
+
+    <!-- Difficulty Comparison Table -->
+    <div class="difficulty-section">
+        <h2>📊 Difficulty Levels</h2>
+        <div class="table-container">
+            <table class="difficulty-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Grid Size</th>
+                        <th>Pieces</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="difficulty-badge easy">Easy</span></td>
+                        <td>3 x 3</td>
+                        <td>9 pieces</td>
+                        <td>Beginners, children, quick play</td>
+                    </tr>
+                    <tr>
+                        <td><span class="difficulty-badge medium">Medium</span></td>
+                        <td>4 x 4</td>
+                        <td>16 pieces</td>
+                        <td>Intermediate players, casual challenge</td>
+                    </tr>
+                    <tr>
+                        <td><span class="difficulty-badge hard">Hard</span></td>
+                        <td>6 x 6</td>
+                        <td>36 pieces</td>
+                        <td>Expert players, long sessions</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Tips & Tricks -->
+    <div class="tips-section">
+        <h2>💡 Tips & Tricks</h2>
+        <ul class="tips-list">
+            <li><strong>Start with corners and edges</strong> - They're easier to identify and place first.</li>
+            <li><strong>Look for patterns</strong> - Use colors and shapes in the image to match pieces.</li>
+            <li><strong>Rotate mentally</strong> - Pieces don't rotate, so focus on the correct orientation.</li>
+            <li><strong>Use the grid</strong> - The faint grid lines help you align pieces correctly.</li>
+            <li><strong>Take your time</strong> - Accuracy is more important than speed when learning.</li>
+            <li><strong>Track your progress</strong> - Check statistics to see your improvement over time.</li>
+        </ul>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta-section">
+        <h3>Ready to test your skills?</h3>
+        <div class="cta-buttons">
+            <a href="easy.html" class="cta-btn easy-btn">Start Easy</a>
+            <a href="medium.html" class="cta-btn medium-btn">Try Medium</a>
+            <a href="hard.html" class="cta-btn hard-btn">Challenge Hard</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="about.html">About</a>
+    </div>
+    <div class="footer-bottom">
+        © 2026 PuzzleWorld
+    </div>
+</footer>
+
+<script src="js/settings.js"></script>
+<script>
+    // Apply theme on page load
+    (function() {
+        function applyTheme() {
+            let theme = 'original';
+            try {
+                const saved = localStorage.getItem('puzzleworld_settings');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    theme = parsed.theme || 'original';
+                }
+            } catch(e) {
+                theme = 'original';
+            }
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.body.classList.remove('original-theme');
+            } else {
+                document.body.classList.add('original-theme');
+                document.body.classList.remove('dark-theme');
+            }
+        }
+        
+        applyTheme();
+        
+        window.addEventListener('settingsChanged', function(e) {
+            if (e.detail && e.detail.theme) {
+                if (e.detail.theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    document.body.classList.remove('original-theme');
+                } else {
+                    document.body.classList.add('original-theme');
+                    document.body.classList.remove('dark-theme');
+                }
+            }
+        });
+        
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'puzzleworld_settings') {
+                try {
+                    const newSettings = JSON.parse(e.newValue);
+                    if (newSettings && newSettings.theme === 'dark') {
+                        document.body.classList.add('dark-theme');
+                        document.body.classList.remove('original-theme');
+                    } else {
+                        document.body.classList.add('original-theme');
+                        document.body.classList.remove('dark-theme');
+                    }
+                } catch(err) {}
+            }
+        });
+    })();
+</script>
+
+</body>
+</html>

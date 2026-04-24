@@ -1,0 +1,768 @@
+/* Terms Container */
+.terms-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+/* Original Theme */
+body.original-theme .terms-container {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Theme */
+body.dark-theme .terms-container {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Original Theme Header */
+body.original-theme .page-header h1 {
+    color: #f5d7a1;
+}
+
+body.original-theme .page-header .subtitle {
+    color: #faedcd;
+}
+
+/* Dark Theme Header */
+body.dark-theme .page-header h1 {
+    color: #a8dadc;
+}
+
+body.dark-theme .page-header .subtitle {
+    color: #c0c0c0;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.page-header .subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+/* Terms Content */
+.terms-content {
+    max-width: 900px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    padding: 40px;
+    border: 2px solid;
+    box-sizing: border-box;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Content */
+body.original-theme .terms-content {
+    background: rgba(60, 35, 15, 0.8);
+    border-color: #d4a373;
+}
+
+/* Dark Theme Content */
+body.dark-theme .terms-content {
+    background: rgba(15, 15, 26, 0.9);
+    border-color: #2a2a3e;
+}
+
+/* Overview Box */
+.overview-box {
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+/* Original Theme Overview Box */
+body.original-theme .overview-box {
+    background: #d4a373;
+}
+
+/* Dark Theme Overview Box */
+body.dark-theme .overview-box {
+    background: #2a2a3e;
+}
+
+.overview-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 30px;
+}
+
+.overview-item {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Overview Item */
+body.original-theme .overview-item {
+    color: #2c1810;
+}
+
+/* Dark Theme Overview Item */
+body.dark-theme .overview-item {
+    color: #a8dadc;
+}
+
+/* Separator between items */
+.overview-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* Original Theme Separator */
+body.original-theme .overview-item:not(:last-child)::after {
+    background: #2c1810;
+}
+
+/* Dark Theme Separator */
+body.dark-theme .overview-item:not(:last-child)::after {
+    background: #a8dadc;
+}
+
+/* Terms Sections */
+.terms-section {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid;
+    transition: border-color 0.3s ease;
+}
+
+/* Original Theme Section Border */
+body.original-theme .terms-section {
+    border-bottom-color: rgba(212, 163, 115, 0.3);
+}
+
+/* Dark Theme Section Border */
+body.dark-theme .terms-section {
+    border-bottom-color: rgba(42, 42, 62, 0.3);
+}
+
+.terms-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.terms-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Section Heading */
+body.original-theme .terms-section h2 {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Section Heading */
+body.dark-theme .terms-section h2 {
+    color: #a8dadc;
+}
+
+.terms-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.95;
+    margin: 0 0 10px 0;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Section Text */
+body.original-theme .terms-section p {
+    color: white;
+}
+
+/* Dark Theme Section Text */
+body.dark-theme .terms-section p {
+    color: #c0c0c0;
+}
+
+.terms-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Terms List */
+.terms-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.terms-list li {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme List Item */
+body.original-theme .terms-list li {
+    color: white;
+}
+
+/* Dark Theme List Item */
+body.dark-theme .terms-list li {
+    color: #c0c0c0;
+}
+
+.terms-list li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Original Theme Bullet */
+body.original-theme .terms-list li::before {
+    color: #d4a373;
+}
+
+/* Dark Theme Bullet */
+body.dark-theme .terms-list li::before {
+    color: #2a2a3e;
+}
+
+.terms-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Terms Link */
+.terms-link {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Original Theme Link */
+body.original-theme .terms-link {
+    color: #d4a373;
+}
+
+/* Dark Theme Link */
+body.dark-theme .terms-link {
+    color: #4a4a6a;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Original Theme Link Hover */
+body.original-theme .terms-link:hover {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Link Hover */
+body.dark-theme .terms-link:hover {
+    color: #a8dadc;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large Desktop */
+@media screen and (max-width: 1200px) {
+    .terms-container {
+        padding: 30px 20px 45px;
+    }
+    
+    .terms-content {
+        padding: 35px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 992px) {
+    .terms-container {
+        padding: 25px 15px 40px;
+    }
+    
+    .page-header h1 {
+        font-size: 36px;
+        white-space: normal;
+    }
+    
+    .page-header .subtitle {
+        font-size: 16px;
+    }
+    
+    .terms-content {
+        padding: 30px;
+    }
+    
+    .overview-box {
+        padding: 18px 22px;
+        margin-bottom: 30px;
+    }
+    
+    .overview-item {
+        font-size: 15px;
+    }
+    
+    .overview-items {
+        gap: 20px 25px;
+    }
+    
+    .terms-section h2 {
+        font-size: 22px;
+    }
+    
+    .terms-section p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+    
+    .terms-list li {
+        font-size: 14px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .terms-container {
+        padding: 20px 15px 35px;
+    }
+    
+    .page-header {
+        margin-bottom: 25px;
+    }
+    
+    .page-header h1 {
+        font-size: 32px;
+    }
+    
+    .terms-content {
+        padding: 25px;
+        border-radius: 25px;
+    }
+    
+    .overview-box {
+        padding: 15px 20px;
+        margin-bottom: 25px;
+        border-radius: 12px;
+    }
+    
+    .overview-item {
+        font-size: 14px;
+    }
+    
+    .overview-items {
+        gap: 15px 20px;
+    }
+    
+    /* Adjust separator position for tablet */
+    .overview-item:not(:last-child)::after {
+        right: -12px;
+        width: 3px;
+        height: 3px;
+    }
+    
+    .terms-section {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+    
+    .terms-section h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .terms-section p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    
+    .terms-list li {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 6px;
+        padding-left: 22px;
+    }
+    
+    .terms-list li::before {
+        left: 6px;
+        font-size: 18px;
+    }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .terms-container {
+        padding: 15px 15px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 28px;
+    }
+    
+    .page-header .subtitle {
+        font-size: 14px;
+    }
+    
+    .terms-content {
+        padding: 20px;
+    }
+    
+    .overview-box {
+        padding: 12px 18px;
+        margin-bottom: 20px;
+    }
+    
+    .overview-items {
+        gap: 12px 15px;
+    }
+    
+    .overview-item {
+        font-size: 13px;
+    }
+    
+    .overview-item:not(:last-child)::after {
+        right: -10px;
+        width: 3px;
+        height: 3px;
+    }
+    
+    .terms-section h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .terms-section p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .terms-list li {
+        font-size: 13px;
+        line-height: 1.6;
+        padding-left: 20px;
+    }
+    
+    .terms-list li::before {
+        left: 5px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .terms-container {
+        padding: 15px 12px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 26px;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    .page-header .subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .terms-content {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+    
+    .overview-box {
+        padding: 15px 15px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+    
+    .overview-items {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    
+    .overview-item {
+        font-size: 14px;
+        white-space: normal;
+        text-align: left;
+        width: 100%;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    /* Remove separators in mobile stacked view */
+    .overview-item:not(:last-child)::after {
+        display: none;
+    }
+    
+    /* Add bullet points for mobile stacked view */
+    .overview-item::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    /* Original Theme Bullet */
+    body.original-theme .overview-item::before {
+        color: #2c1810;
+    }
+    
+    /* Dark Theme Bullet */
+    body.dark-theme .overview-item::before {
+        color: #a8dadc;
+    }
+    
+    .terms-section {
+        margin-bottom: 20px;
+        padding-bottom: 18px;
+    }
+    
+    .terms-section h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        gap: 8px;
+    }
+    
+    .terms-section p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .terms-list {
+        margin-top: 8px;
+    }
+    
+    .terms-list li {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 6px;
+        padding-left: 20px;
+    }
+    
+    .terms-list li::before {
+        left: 5px;
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 380px) {
+    .terms-container {
+        padding: 12px 10px 25px;
+    }
+    
+    .page-header h1 {
+        font-size: 22px;
+    }
+    
+    .page-header .subtitle {
+        font-size: 13px;
+    }
+    
+    .terms-content {
+        padding: 15px 12px;
+    }
+    
+    .overview-box {
+        padding: 12px 12px;
+        margin-bottom: 20px;
+    }
+    
+    .overview-item {
+        font-size: 13px;
+        padding-left: 18px;
+    }
+    
+    .overview-item::before {
+        font-size: 16px;
+    }
+    
+    .terms-section h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+    
+    .terms-section p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+    .terms-list li {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 5px;
+        padding-left: 18px;
+    }
+    
+    .terms-list li::before {
+        left: 4px;
+        font-size: 14px;
+    }
+}
+
+/* Very Small Mobile */
+@media screen and (max-width: 320px) {
+    .page-header h1 {
+        font-size: 20px;
+    }
+    
+    .page-header .subtitle {
+        font-size: 12px;
+    }
+    
+    .terms-content {
+        padding: 12px 10px;
+    }
+    
+    .overview-item {
+        font-size: 12px;
+        padding-left: 16px;
+    }
+    
+    .overview-item::before {
+        font-size: 14px;
+    }
+    
+    .terms-section h2 {
+        font-size: 15px;
+    }
+    
+    .terms-section p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+    
+    .terms-list li {
+        font-size: 11px;
+        line-height: 1.4;
+        padding-left: 16px;
+    }
+}
+
+/* Fix for devices with notches */
+@supports (padding: max(0px)) {
+    .terms-container {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+        padding-bottom: max(50px, env(safe-area-inset-bottom));
+    }
+    
+    .terms-content {
+        padding-left: max(40px, env(safe-area-inset-left));
+        padding-right: max(40px, env(safe-area-inset-right));
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .terms-content,
+    .overview-box {
+        border-width: 1px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .terms-link {
+        transition: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .terms-container {
+        background: white;
+        padding: 20px;
+    }
+    
+    .page-header h1 {
+        color: #333;
+    }
+    
+    .page-header .subtitle {
+        color: #666;
+    }
+    
+    .terms-content {
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+    
+    .overview-box {
+        background: #f5f5f5;
+        border: 1px solid #ddd;
+    }
+    
+    .overview-item {
+        color: #333;
+    }
+    
+    .overview-item::before {
+        color: #333;
+    }
+    
+    .terms-section h2 {
+        color: #333;
+    }
+    
+    .terms-section p,
+    .terms-list li {
+        color: #555;
+    }
+    
+    .terms-list li::before {
+        color: #333;
+    }
+    
+    .terms-link {
+        color: #0066cc;
+        text-decoration: underline;
+    }
+    
+    .navbar, .footer {
+        display: none;
+    }
+}

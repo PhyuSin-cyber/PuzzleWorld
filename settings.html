@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Settings - PuzzleWorld</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/settings.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>">
+</head>
+<body class="original-theme">
+
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">🧩 <span class="logo-text">PuzzleWorld</span></a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+            <label for="dropdown-toggle" class="dropbtn">
+                <span>Play Game</span>
+                <span class="arrow">▾</span>
+            </label>
+            <div class="dropdown-content">
+                <a href="easy.html">Easy</a>
+                <a href="medium.html">Medium</a>
+                <a href="hard.html">Hard</a>
+            </div>
+        </div>
+        <a href="howtoplay.html">How to Play</a>
+        <a href="settings.html" class="active">Settings</a>
+        <a href="statistics.html">Statistics</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<section class="settings-container">
+    <div class="page-header">
+        <h1>⚙️ Game Settings</h1>
+        <p class="subtitle">Customize your puzzle experience</p>
+    </div>
+
+    <div class="settings-content">
+        <div class="setting-item">
+            <div class="setting-info">
+                <div class="setting-icon">⏱️</div>
+                <div class="setting-text">
+                    <h3>Show Timer</h3>
+                    <p>Display timer during gameplay</p>
+                </div>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="timerToggle">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <div class="setting-icon">🔄</div>
+                <div class="setting-text">
+                    <h3>Show Move Counter</h3>
+                    <p>Display number of moves made</p>
+                </div>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="movesToggle">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <div class="setting-icon">🎵</div>
+                <div class="setting-text">
+                    <h3>Sound Effects</h3>
+                    <p>Play sounds when pieces snap and puzzle completes</p>
+                </div>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="soundToggle">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item volume-control">
+            <div class="setting-info">
+                <div class="setting-icon">🔊</div>
+                <div class="setting-text">
+                    <h3>Sound Effects Volume</h3>
+                    <p>Adjust sound effects volume (hear preview while adjusting)</p>
+                </div>
+            </div>
+            <div class="volume-slider-container">
+                <span class="volume-icon">🔈</span>
+                <input type="range" id="volumeSlider" min="0" max="100" value="70" class="volume-slider">
+                <span class="volume-icon">🔊</span>
+                <span id="volumeValue" class="volume-value">70%</span>
+            </div>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <div class="setting-icon">🎧</div>
+                <div class="setting-text">
+                    <h3>Background Music</h3>
+                    <p>Play relaxing LoFi background music while you puzzle</p>
+                </div>
+            </div>
+            <label class="toggle-switch">
+                <input type="checkbox" id="musicToggle">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item volume-control">
+            <div class="setting-info">
+                <div class="setting-icon">🎼</div>
+                <div class="setting-text">
+                    <h3>Music Volume</h3>
+                    <p>Adjust background music volume</p>
+                </div>
+            </div>
+            <div class="volume-slider-container">
+                <span class="volume-icon">🔈</span>
+                <input type="range" id="musicVolumeSlider" min="0" max="100" value="40" class="volume-slider">
+                <span class="volume-icon">🔊</span>
+                <span id="musicVolumeValue" class="volume-value">40%</span>
+            </div>
+        </div>
+
+        <div class="theme-section">
+            <div class="theme-info">
+                <div class="theme-icon">🎨</div>
+                <div class="theme-text">
+                    <h3>Theme</h3>
+                    <p>Choose your preferred theme</p>
+                </div>
+            </div>
+            <div class="theme-options">
+                <div class="theme-option active" id="themeOriginal" data-theme="original">
+                    <div class="theme-preview light-preview">
+                        <span>☀️</span>
+                    </div>
+                    <span class="theme-name">Original</span>
+                </div>
+                <div class="theme-option" id="themeDark" data-theme="dark">
+                    <div class="theme-preview dark-preview">
+                        <span>🌙</span>
+                    </div>
+                    <span class="theme-name">Dark</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="saveBtn" class="save-btn">💾 Save Settings</button>
+            <button id="resetBtn" class="reset-btn">🔄 Reset to Default</button>
+        </div>
+
+        <div id="saveMessage" class="save-message">Settings saved successfully!</div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="about.html">About</a>
+    </div>
+    <div class="footer-bottom">
+        © 2026 PuzzleWorld
+    </div>
+</footer>
+
+<script src="js/settings.js"></script>
+</body>
+</html>

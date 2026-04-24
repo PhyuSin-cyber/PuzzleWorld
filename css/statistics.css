@@ -1,0 +1,817 @@
+/* Statistics Container */
+.statistics-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+/* Original Theme */
+body.original-theme .statistics-container {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Theme */
+body.dark-theme .statistics-container {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Original Theme Header */
+body.original-theme .page-header h1 {
+    color: #f5d7a1;
+}
+
+body.original-theme .page-header .subtitle {
+    color: #faedcd;
+}
+
+/* Dark Theme Header */
+body.dark-theme .page-header h1 {
+    color: #a8dadc;
+}
+
+body.dark-theme .page-header .subtitle {
+    color: #c0c0c0;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.page-header .subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+/* Statistics Tabs */
+.stat-tabs {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Original Theme Tabs */
+body.original-theme .tab-btn {
+    background: rgba(60, 35, 15, 0.7);
+    color: #f5d7a1;
+    border: 1px solid #d4a373;
+}
+
+body.original-theme .tab-btn:hover {
+    background: #3d2a1a;
+    transform: translateY(-2px);
+}
+
+body.original-theme .tab-btn.active {
+    background: #d4a373;
+    color: white;
+}
+
+/* Dark Theme Tabs */
+body.dark-theme .tab-btn {
+    background: rgba(15, 15, 26, 0.7);
+    color: #a8dadc;
+    border: 1px solid #2a2a3e;
+}
+
+body.dark-theme .tab-btn:hover {
+    background: #1a1a2e;
+    transform: translateY(-2px);
+}
+
+body.dark-theme .tab-btn.active {
+    background: #2a2a3e;
+    color: #e0e0e0;
+}
+
+/* Stats Overview Cards */
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.3s, background 0.3s ease, border-color 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Original Theme Cards */
+body.original-theme .stat-card {
+    background: rgba(60, 35, 15, 0.8);
+    border: 1px solid #d4a373;
+}
+
+/* Dark Theme Cards */
+body.dark-theme .stat-card {
+    background: rgba(15, 15, 26, 0.8);
+    border: 1px solid #2a2a3e;
+}
+
+.stat-icon {
+    font-size: 48px;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Original Theme Card Text */
+body.original-theme .stat-label {
+    color: #faedcd;
+}
+
+body.original-theme .stat-value {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Card Text */
+body.dark-theme .stat-label {
+    color: #a8dadc;
+}
+
+body.dark-theme .stat-value {
+    color: #a8dadc;
+}
+
+.stat-label {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Recent Games Section */
+.recent-games {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.recent-games h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+body.original-theme .recent-games h2 {
+    color: #f5d7a1;
+}
+
+body.dark-theme .recent-games h2 {
+    color: #a8dadc;
+}
+
+/* Table Container */
+.table-container {
+    border-radius: 20px;
+    overflow-x: auto;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+body.original-theme .table-container {
+    background: rgba(60, 35, 15, 0.8);
+    border: 1px solid #d4a373;
+}
+
+body.dark-theme .table-container {
+    background: rgba(15, 15, 26, 0.8);
+    border: 1px solid #2a2a3e;
+}
+
+#recentGamesTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+/* Original Theme Table */
+body.original-theme #recentGamesTable th {
+    color: #f5d7a1;
+    border-bottom-color: #d4a373;
+}
+
+body.original-theme #recentGamesTable td {
+    color: white;
+    border-bottom-color: rgba(212, 163, 115, 0.3);
+}
+
+/* Dark Theme Table */
+body.dark-theme #recentGamesTable th {
+    color: #a8dadc;
+    border-bottom-color: #2a2a3e;
+}
+
+body.dark-theme #recentGamesTable td {
+    color: #c0c0c0;
+    border-bottom-color: rgba(42, 42, 62, 0.3);
+}
+
+#recentGamesTable th {
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+    border-bottom: 2px solid;
+    transition: color 0.3s ease;
+}
+
+#recentGamesTable td {
+    padding: 15px;
+    border-bottom: 1px solid;
+    transition: color 0.3s ease;
+}
+
+#recentGamesTable tr:last-child td {
+    border-bottom: none;
+}
+
+.no-data {
+    text-align: center !important;
+    padding: 40px !important;
+    font-style: italic;
+}
+
+/* Action Buttons */
+.stat-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.danger-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+/* Original Theme Danger Buttons */
+body.original-theme .danger-btn {
+    background: #d32f2f;
+    color: white;
+}
+
+body.original-theme .danger-btn:hover {
+    background: #f44336;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Dark Theme Danger Buttons */
+body.dark-theme .danger-btn {
+    background: #6a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark-theme .danger-btn:hover {
+    background: #8a3a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.danger-btn:active {
+    transform: translateY(0);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+/* Original Theme Modal */
+body.original-theme .modal-content {
+    background: rgba(60, 35, 15, 0.98);
+    border: 2px solid #d4a373;
+}
+
+body.original-theme .modal-content h3 {
+    color: #f5d7a1;
+}
+
+body.original-theme .modal-content p {
+    color: white;
+}
+
+/* Dark Theme Modal */
+body.dark-theme .modal-content {
+    background: rgba(15, 15, 26, 0.98);
+    border: 2px solid #2a2a3e;
+}
+
+body.dark-theme .modal-content h3 {
+    color: #a8dadc;
+}
+
+body.dark-theme .modal-content p {
+    color: #c0c0c0;
+}
+
+.modal-content {
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.modal-content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.confirm-btn, .cancel-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirm-btn {
+    background: #4CAF50;
+    color: white;
+}
+
+.confirm-btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.cancel-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #5a6268;
+    transform: scale(1.05);
+}
+
+/* Notification */
+.stat-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    z-index: 9999;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.stat-notification.success {
+    background: #4CAF50;
+}
+
+.stat-notification.error {
+    background: #f44336;
+}
+
+.stat-notification.info {
+    background: #d4a373;
+}
+
+body.dark-theme .stat-notification.info {
+    background: #2a2a3e;
+    color: #a8dadc;
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large Desktop */
+@media screen and (max-width: 1200px) {
+    .statistics-container {
+        padding: 30px 20px 45px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 992px) {
+    .statistics-container {
+        padding: 25px 15px 40px;
+    }
+    
+    .page-header h1 {
+        font-size: 36px;
+        white-space: normal;
+    }
+    
+    .page-header .subtitle {
+        font-size: 16px;
+    }
+    
+    .stats-overview {
+        gap: 15px;
+    }
+    
+    .stat-value {
+        font-size: 24px;
+    }
+    
+    .stat-icon {
+        font-size: 40px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .statistics-container {
+        padding: 20px 15px 35px;
+    }
+    
+    .page-header h1 {
+        font-size: 32px;
+    }
+    
+    .stat-tabs {
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .stats-overview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        max-width: 400px;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .stat-value {
+        font-size: 22px;
+    }
+    
+    .recent-games h2 {
+        font-size: 24px;
+    }
+    
+    #recentGamesTable th,
+    #recentGamesTable td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    
+    .danger-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        min-width: 180px;
+    }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .statistics-container {
+        padding: 15px 15px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 28px;
+    }
+    
+    .page-header .subtitle {
+        font-size: 14px;
+    }
+    
+    .stat-tabs {
+        gap: 8px;
+    }
+    
+    .tab-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .stats-overview {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .stat-card {
+        padding: 12px;
+    }
+    
+    .stat-icon {
+        font-size: 32px;
+    }
+    
+    .stat-value {
+        font-size: 18px;
+    }
+    
+    .stat-label {
+        font-size: 11px;
+    }
+    
+    #recentGamesTable th,
+    #recentGamesTable td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    
+    .danger-btn {
+        padding: 8px 16px;
+        font-size: 13px;
+        min-width: 150px;
+    }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .statistics-container {
+        padding: 15px 12px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 26px;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    .page-header .subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .stat-tabs {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        gap: 8px;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .stats-overview {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .stat-card {
+        padding: 15px;
+    }
+    
+    .recent-games h2 {
+        font-size: 22px;
+    }
+    
+    .table-container {
+        border-radius: 15px;
+    }
+    
+    #recentGamesTable th,
+    #recentGamesTable td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    
+    .stat-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .danger-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .modal-content {
+        padding: 20px;
+        width: 85%;
+    }
+    
+    .modal-content h3 {
+        font-size: 20px;
+    }
+    
+    .modal-content p {
+        font-size: 14px;
+    }
+    
+    .confirm-btn, .cancel-btn {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 380px) {
+    .statistics-container {
+        padding: 12px 10px 25px;
+    }
+    
+    .page-header h1 {
+        font-size: 22px;
+    }
+    
+    .page-header .subtitle {
+        font-size: 13px;
+    }
+    
+    .stat-card {
+        padding: 12px;
+    }
+    
+    .stat-icon {
+        font-size: 28px;
+    }
+    
+    .stat-value {
+        font-size: 20px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+    
+    #recentGamesTable th,
+    #recentGamesTable td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+}
+
+/* Very Small Mobile */
+@media screen and (max-width: 320px) {
+    .page-header h1 {
+        font-size: 20px;
+    }
+    
+    .stat-icon {
+        font-size: 24px;
+    }
+    
+    .stat-value {
+        font-size: 18px;
+    }
+    
+    .danger-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* Fix for devices with notches */
+@supports (padding: max(0px)) {
+    .statistics-container {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+        padding-bottom: max(50px, env(safe-area-inset-bottom));
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .stat-card,
+    .table-container,
+    .modal-content {
+        border-width: 1px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .stat-card,
+    .tab-btn,
+    .danger-btn,
+    .confirm-btn,
+    .cancel-btn {
+        transition: none;
+    }
+    
+    .stat-card:hover,
+    .tab-btn:hover,
+    .danger-btn:hover {
+        transform: none;
+    }
+}

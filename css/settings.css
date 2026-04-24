@@ -1,0 +1,735 @@
+/* ============================================
+   SETTINGS PAGE STYLES
+   ============================================ */
+
+.settings-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+/* Original Theme */
+body.original-theme .settings-container {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Theme */
+body.dark-theme .settings-container {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Original Theme Header */
+body.original-theme .page-header h1 {
+    color: #f5d7a1;
+}
+
+body.original-theme .page-header .subtitle {
+    color: #faedcd;
+}
+
+/* Dark Theme Header */
+body.dark-theme .page-header h1 {
+    color: #a8dadc;
+}
+
+body.dark-theme .page-header .subtitle {
+    color: #c0c0c0;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.page-header .subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+.settings-content {
+    max-width: 650px;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    border-radius: 32px;
+    padding: 30px;
+    border: 1px solid;
+    box-sizing: border-box;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Content */
+body.original-theme .settings-content {
+    background: rgba(60, 35, 15, 0.85);
+    border-color: #d4a373;
+}
+
+/* Dark Theme Content */
+body.dark-theme .settings-content {
+    background: rgba(15, 15, 26, 0.92);
+    border-color: #2a2a3e;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 15px;
+    margin-bottom: 16px;
+    border-radius: 20px;
+    border: 1px solid;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Setting Item */
+body.original-theme .setting-item {
+    background: rgba(212, 163, 115, 0.12);
+    border-color: rgba(212, 163, 115, 0.2);
+}
+
+/* Dark Theme Setting Item */
+body.dark-theme .setting-item {
+    background: rgba(42, 42, 62, 0.25);
+    border-color: rgba(42, 42, 62, 0.4);
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.setting-icon {
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+/* Original Theme Icon */
+body.original-theme .setting-icon {
+    background: rgba(212, 163, 115, 0.2);
+}
+
+/* Dark Theme Icon */
+body.dark-theme .setting-icon {
+    background: rgba(42, 42, 62, 0.3);
+}
+
+.setting-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Text */
+body.original-theme .setting-text h3 {
+    color: #f5d7a1;
+}
+
+body.original-theme .setting-text p {
+    color: white;
+}
+
+/* Dark Theme Text */
+body.dark-theme .setting-text h3 {
+    color: #a8dadc;
+}
+
+body.dark-theme .setting-text p {
+    color: #c0c0c0;
+}
+
+.setting-text p {
+    font-size: 13px;
+    opacity: 0.8;
+    transition: color 0.3s ease;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.25s;
+    border-radius: 30px;
+    border: 1px solid;
+}
+
+/* Original Theme Toggle */
+body.original-theme .toggle-slider {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #d4a373;
+}
+
+body.original-theme input:checked + .toggle-slider {
+    background-color: #d4a373;
+}
+
+/* Dark Theme Toggle */
+body.dark-theme .toggle-slider {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #2a2a3e;
+}
+
+body.dark-theme input:checked + .toggle-slider {
+    background-color: #2a6b6e;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.25s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(29px);
+}
+
+/* Volume Control */
+.volume-control {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.volume-slider-container {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.volume-icon {
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Volume Icon */
+body.original-theme .volume-icon {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Volume Icon */
+body.dark-theme .volume-icon {
+    color: #a8dadc;
+}
+
+.volume-slider {
+    flex: 1;
+    min-width: 180px;
+    height: 6px;
+    border-radius: 3px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+/* Original Theme Volume Slider */
+body.original-theme .volume-slider {
+    background: rgba(212, 163, 115, 0.4);
+}
+
+body.original-theme .volume-slider::-webkit-slider-thumb {
+    background: #d4a373;
+}
+
+/* Dark Theme Volume Slider */
+body.dark-theme .volume-slider {
+    background: rgba(42, 42, 62, 0.5);
+}
+
+body.dark-theme .volume-slider::-webkit-slider-thumb {
+    background: #2a6b6e;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.volume-value {
+    font-weight: bold;
+    min-width: 45px;
+    text-align: right;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Volume Value */
+body.original-theme .volume-value {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Volume Value */
+body.dark-theme .volume-value {
+    color: #a8dadc;
+}
+
+/* Theme Section */
+.theme-section {
+    margin: 20px 0;
+    padding: 18px;
+    border-radius: 20px;
+    border: 1px solid;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Section */
+body.original-theme .theme-section {
+    background: rgba(212, 163, 115, 0.08);
+    border-color: rgba(212, 163, 115, 0.2);
+}
+
+/* Dark Theme Section */
+body.dark-theme .theme-section {
+    background: rgba(42, 42, 62, 0.2);
+    border-color: rgba(42, 42, 62, 0.4);
+}
+
+.theme-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.theme-icon {
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+/* Original Theme Icon */
+body.original-theme .theme-icon {
+    background: rgba(212, 163, 115, 0.2);
+}
+
+/* Dark Theme Icon */
+body.dark-theme .theme-icon {
+    background: rgba(42, 42, 62, 0.3);
+}
+
+.theme-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Text */
+body.original-theme .theme-text h3 {
+    color: #f5d7a1;
+}
+
+body.original-theme .theme-text p {
+    color: white;
+}
+
+/* Dark Theme Text */
+body.dark-theme .theme-text h3 {
+    color: #a8dadc;
+}
+
+body.dark-theme .theme-text p {
+    color: #c0c0c0;
+}
+
+.theme-text p {
+    font-size: 13px;
+    opacity: 0.8;
+    transition: color 0.3s ease;
+}
+
+.theme-options {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.theme-option {
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s;
+    padding: 5px;
+}
+
+.theme-option:hover {
+    transform: translateY(-3px);
+}
+
+.theme-option.active .theme-preview {
+    border: 3px solid;
+    box-shadow: 0 0 12px rgba(245, 215, 161, 0.5);
+}
+
+/* Original Theme Active Preview */
+body.original-theme .theme-option.active .theme-preview {
+    border-color: #f5d7a1;
+}
+
+/* Dark Theme Active Preview */
+body.dark-theme .theme-option.active .theme-preview {
+    border-color: #a8dadc;
+    box-shadow: 0 0 12px rgba(168, 218, 220, 0.3);
+}
+
+.theme-preview {
+    width: 90px;
+    height: 90px;
+    border-radius: 24px;
+    margin-bottom: 8px;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    transition: all 0.2s;
+}
+
+.light-preview {
+    background: #f5e6d3;
+    color: #5a3e2b;
+}
+
+.dark-preview {
+    background: #1e1e2c;
+    color: #a8dadc;
+}
+
+/* Dark Theme Preview Overrides */
+body.dark-theme .light-preview {
+    background: #2c2c3a;
+    color: #ddd;
+}
+
+body.dark-theme .dark-preview {
+    background: #0a0a12;
+    border-color: #a8dadc;
+    color: #a8dadc;
+}
+
+.theme-name {
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Name */
+body.original-theme .theme-name {
+    color: white;
+}
+
+/* Dark Theme Name */
+body.dark-theme .theme-name {
+    color: #c0c0c0;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.save-btn, .reset-btn {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    min-width: 160px;
+}
+
+/* Original Theme Buttons */
+body.original-theme .save-btn {
+    background: #d4a373;
+    color: #1e2a1f;
+}
+
+body.original-theme .save-btn:hover {
+    background: #c38e5f;
+    transform: translateY(-2px);
+}
+
+body.original-theme .reset-btn {
+    background: #6c757d;
+    color: white;
+}
+
+body.original-theme .reset-btn:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Dark Theme Buttons */
+body.dark-theme .save-btn {
+    background: #2a6b6e;
+    color: #e0e0e0;
+}
+
+body.dark-theme .save-btn:hover {
+    background: #3a7b7e;
+    transform: translateY(-2px);
+}
+
+body.dark-theme .reset-btn {
+    background: #4a2a2a;
+    color: #e0e0e0;
+}
+
+body.dark-theme .reset-btn:hover {
+    background: #5a3a3a;
+    transform: translateY(-2px);
+}
+
+.save-btn:active, .reset-btn:active {
+    transform: translateY(0);
+}
+
+.save-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    display: none;
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .settings-container {
+        padding: 20px 15px 35px;
+    }
+    
+    .page-header h1 {
+        font-size: 32px;
+        white-space: normal;
+    }
+    
+    .page-header .subtitle {
+        font-size: 16px;
+    }
+    
+    .settings-content {
+        padding: 20px;
+    }
+    
+    .setting-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+    }
+    
+    .toggle-switch {
+        align-self: flex-end;
+    }
+    
+    .setting-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+    }
+    
+    .setting-text h3 {
+        font-size: 16px;
+    }
+    
+    .theme-preview {
+        width: 75px;
+        height: 75px;
+        font-size: 32px;
+    }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .settings-container {
+        padding: 15px 15px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 28px;
+    }
+    
+    .settings-content {
+        padding: 15px;
+    }
+    
+    .volume-slider {
+        min-width: 150px;
+    }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .settings-container {
+        padding: 15px 12px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 26px;
+        white-space: normal;
+        line-height: 1.3;
+    }
+    
+    .page-header .subtitle {
+        font-size: 14px;
+    }
+    
+    .settings-content {
+        padding: 20px 15px;
+        border-radius: 24px;
+    }
+    
+    .volume-slider-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .theme-preview {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        border-radius: 20px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .save-btn, .reset-btn {
+        width: 100%;
+        min-width: unset;
+        padding: 12px 20px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 380px) {
+    .page-header h1 {
+        font-size: 22px;
+    }
+    
+    .settings-content {
+        padding: 15px 12px;
+    }
+    
+    .theme-preview {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+    
+    .theme-options {
+        gap: 15px;
+    }
+    
+    .theme-name {
+        font-size: 12px;
+    }
+}
+
+/* Fix for devices with notches */
+@supports (padding: max(0px)) {
+    .settings-container {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+        padding-bottom: max(50px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .setting-item,
+    .theme-option,
+    .save-btn,
+    .reset-btn,
+    .volume-slider::-webkit-slider-thumb {
+        transition: none;
+    }
+    
+    .theme-option:hover,
+    .save-btn:hover,
+    .reset-btn:hover {
+        transform: none;
+    }
+}

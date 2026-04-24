@@ -1,0 +1,1294 @@
+/* About Container */
+.about-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+/* Original Theme */
+body.original-theme .about-container {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Theme */
+body.dark-theme .about-container {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Original Theme Header */
+body.original-theme .page-header h1 {
+    color: #f5d7a1;
+}
+
+body.original-theme .page-header .subtitle {
+    color: #faedcd;
+}
+
+/* Dark Theme Header */
+body.dark-theme .page-header h1 {
+    color: #a8dadc;
+}
+
+body.dark-theme .page-header .subtitle {
+    color: #c0c0c0;
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.page-header .subtitle {
+    font-size: 18px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+/* Story Section */
+.story-section {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+    padding: 40px;
+    border: 2px solid;
+    box-sizing: border-box;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Story Section */
+body.original-theme .story-section {
+    background: rgba(60, 35, 15, 0.8);
+    border-color: #d4a373;
+}
+
+/* Dark Theme Story Section */
+body.dark-theme .story-section {
+    background: rgba(15, 15, 26, 0.8);
+    border-color: #2a2a3e;
+}
+
+.story-content {
+    flex: 1;
+}
+
+/* Original Theme Story Content */
+body.original-theme .story-content h2 {
+    color: #f5d7a1;
+}
+
+body.original-theme .story-content p {
+    color: white;
+}
+
+/* Dark Theme Story Content */
+body.dark-theme .story-content h2 {
+    color: #a8dadc;
+}
+
+body.dark-theme .story-content p {
+    color: #c0c0c0;
+}
+
+.story-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.story-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+.story-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    transition: border-color 0.3s ease;
+}
+
+/* Original Theme Image Border */
+body.original-theme .about-image {
+    border-color: #d4a373;
+}
+
+/* Dark Theme Image Border */
+body.dark-theme .about-image {
+    border-color: #2a2a3e;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 50px;
+}
+
+.mission-card,
+.vision-card {
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    border: 2px solid;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Mission/Vision Cards */
+body.original-theme .mission-card,
+body.original-theme .vision-card {
+    background: rgba(60, 35, 15, 0.8);
+    border-color: #d4a373;
+}
+
+/* Dark Theme Mission/Vision Cards */
+body.dark-theme .mission-card,
+body.dark-theme .vision-card {
+    background: rgba(15, 15, 26, 0.8);
+    border-color: #2a2a3e;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mission-icon,
+.vision-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    line-height: 1;
+}
+
+/* Original Theme Mission/Vision Text */
+body.original-theme .mission-card h3,
+body.original-theme .vision-card h3 {
+    color: #f5d7a1;
+}
+
+body.original-theme .mission-card p,
+body.original-theme .vision-card p {
+    color: white;
+}
+
+/* Dark Theme Mission/Vision Text */
+body.dark-theme .mission-card h3,
+body.dark-theme .vision-card h3 {
+    color: #a8dadc;
+}
+
+body.dark-theme .mission-card p,
+body.dark-theme .vision-card p {
+    color: #c0c0c0;
+}
+
+.mission-card h3,
+.vision-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.mission-card p,
+.vision-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+/* Features Section */
+.features-section {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+}
+
+.features-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Features Title */
+body.original-theme .features-section h2 {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Features Title */
+body.dark-theme .features-section h2 {
+    color: #a8dadc;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature-item {
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    border: 2px solid;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Feature Item */
+body.original-theme .feature-item {
+    background: rgba(60, 35, 15, 0.8);
+    border-color: #d4a373;
+}
+
+/* Dark Theme Feature Item */
+body.dark-theme .feature-item {
+    background: rgba(15, 15, 26, 0.8);
+    border-color: #2a2a3e;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+/* Original Theme Feature Text */
+body.original-theme .feature-item h4 {
+    color: #f5d7a1;
+}
+
+body.original-theme .feature-item p {
+    color: white;
+}
+
+/* Dark Theme Feature Text */
+body.dark-theme .feature-item h4 {
+    color: #a8dadc;
+}
+
+body.dark-theme .feature-item p {
+    color: #c0c0c0;
+}
+
+.feature-item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.feature-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 50px;
+}
+
+.testimonials-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Testimonials Title */
+body.original-theme .testimonials-section h2 {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Testimonials Title */
+body.dark-theme .testimonials-section h2 {
+    color: #a8dadc;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.testimonial-card {
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 30px 20px;
+    border: 2px solid;
+    position: relative;
+    transition: transform 0.3s, background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Testimonial Card */
+body.original-theme .testimonial-card {
+    background: rgba(60, 35, 15, 0.8);
+    border-color: #d4a373;
+}
+
+/* Dark Theme Testimonial Card */
+body.dark-theme .testimonial-card {
+    background: rgba(15, 15, 26, 0.8);
+    border-color: #2a2a3e;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.quote {
+    font-size: 64px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    opacity: 0.3;
+    line-height: 1;
+}
+
+/* Original Theme Quote */
+body.original-theme .quote {
+    color: #d4a373;
+}
+
+/* Dark Theme Quote */
+body.dark-theme .quote {
+    color: #2a2a3e;
+}
+
+.testimonial-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    font-style: italic;
+    padding-top: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Testimonial Text */
+body.original-theme .testimonial-text {
+    color: white;
+}
+
+/* Dark Theme Testimonial Text */
+body.dark-theme .testimonial-text {
+    color: #c0c0c0;
+}
+
+.testimonial-author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Author Name */
+body.original-theme .author-name {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Author Name */
+body.dark-theme .author-name {
+    color: #a8dadc;
+}
+
+.author-rating {
+    color: #FFD700;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* FAQ Section */
+.faq-section {
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 50px;
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme FAQ Title */
+body.original-theme .faq-section h2 {
+    color: #f5d7a1;
+}
+
+/* Dark Theme FAQ Title */
+body.dark-theme .faq-section h2 {
+    color: #a8dadc;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.faq-item {
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme FAQ Item */
+body.original-theme .faq-item {
+    background: rgba(60, 35, 15, 0.8);
+    border-color: #d4a373;
+}
+
+/* Dark Theme FAQ Item */
+body.dark-theme .faq-item {
+    background: rgba(15, 15, 26, 0.8);
+    border-color: #2a2a3e;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme FAQ Heading */
+body.original-theme .faq-item h4 {
+    color: #f5d7a1;
+}
+
+/* Dark Theme FAQ Heading */
+body.dark-theme .faq-item h4 {
+    color: #a8dadc;
+}
+
+.faq-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme FAQ Text */
+body.original-theme .faq-item p {
+    color: white;
+}
+
+/* Dark Theme FAQ Text */
+body.dark-theme .faq-item p {
+    color: #c0c0c0;
+}
+
+/* Contact Section */
+.contact-section {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Contact Title */
+body.original-theme .contact-section h2 {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Contact Title */
+body.dark-theme .contact-section h2 {
+    color: #a8dadc;
+}
+
+.contact-form-container {
+    width: 100%;
+}
+
+.contact-form {
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px solid;
+    box-sizing: border-box;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Original Theme Contact Form */
+body.original-theme .contact-form {
+    background: rgba(60, 35, 15, 0.8);
+    border-color: #d4a373;
+}
+
+/* Dark Theme Contact Form */
+body.dark-theme .contact-form {
+    background: rgba(15, 15, 26, 0.8);
+    border-color: #2a2a3e;
+}
+
+.contact-form h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Original Theme Contact Form Heading */
+body.original-theme .contact-form h4 {
+    color: #f5d7a1;
+}
+
+/* Dark Theme Contact Form Heading */
+body.dark-theme .contact-form h4 {
+    color: #a8dadc;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+/* Original Theme Form Inputs */
+body.original-theme .contact-form input,
+body.original-theme .contact-form textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #d4a373;
+    color: white;
+}
+
+/* Dark Theme Form Inputs */
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #2a2a3e;
+    color: #e0e0e0;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    opacity: 0.7;
+}
+
+/* Original Theme Placeholder */
+body.original-theme .contact-form input::placeholder,
+body.original-theme .contact-form textarea::placeholder {
+    color: #faedcd;
+}
+
+/* Dark Theme Placeholder */
+body.dark-theme .contact-form input::placeholder,
+body.dark-theme .contact-form textarea::placeholder {
+    color: #a8dadc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Original Theme Focus */
+body.original-theme .contact-form input:focus,
+body.original-theme .contact-form textarea:focus {
+    border-color: #f5d7a1;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Dark Theme Focus */
+body.dark-theme .contact-form input:focus,
+body.dark-theme .contact-form textarea:focus {
+    border-color: #a8dadc;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+/* Original Theme Submit Button */
+body.original-theme .submit-btn {
+    background: #d4a373;
+    color: white;
+    border: 1px solid #e9d8b0;
+}
+
+/* Dark Theme Submit Button */
+body.dark-theme .submit-btn {
+    background: #2a2a3e;
+    color: #e0e0e0;
+    border: 1px solid #3a3a4e;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Original Theme Submit Hover */
+body.original-theme .submit-btn:hover {
+    background: #c38e5f;
+}
+
+/* Dark Theme Submit Hover */
+body.dark-theme .submit-btn:hover {
+    background: #3a3a4e;
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-message.success {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4CAF50;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large Desktop */
+@media screen and (max-width: 1200px) {
+    .about-container {
+        padding: 30px 20px 45px;
+    }
+    
+    .story-section {
+        padding: 35px;
+        gap: 30px;
+    }
+    
+    .story-content h2 {
+        font-size: 30px;
+    }
+    
+    .features-grid,
+    .testimonials-grid {
+        gap: 18px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 992px) {
+    .about-container {
+        padding: 25px 15px 40px;
+    }
+    
+    .page-header h1 {
+        font-size: 36px;
+        white-space: normal;
+    }
+    
+    .page-header .subtitle {
+        font-size: 16px;
+    }
+    
+    .story-section {
+        padding: 30px;
+        gap: 25px;
+    }
+    
+    .story-content h2 {
+        font-size: 28px;
+    }
+    
+    .story-content p {
+        font-size: 15px;
+    }
+    
+    .mission-vision {
+        gap: 20px;
+    }
+    
+    .mission-card,
+    .vision-card {
+        padding: 30px;
+    }
+    
+    .mission-icon,
+    .vision-icon {
+        font-size: 56px;
+    }
+    
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 22px;
+    }
+    
+    .features-grid,
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .features-section h2,
+    .testimonials-section h2,
+    .faq-section h2,
+    .contact-section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .about-container {
+        padding: 20px 15px 35px;
+    }
+    
+    .page-header {
+        margin-bottom: 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 32px;
+    }
+    
+    .story-section {
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+    }
+    
+    .story-content h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+    
+    .story-content p {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .story-image {
+        order: -1;
+    }
+    
+    .about-image {
+        max-width: 300px;
+    }
+    
+    .mission-vision {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .mission-card,
+    .vision-card {
+        padding: 25px;
+    }
+    
+    .features-section,
+    .testimonials-section,
+    .faq-section {
+        margin-bottom: 40px;
+    }
+    
+    .features-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .feature-item {
+        padding: 25px;
+    }
+    
+    .testimonial-card {
+        padding: 25px;
+    }
+    
+    .testimonial-text {
+        font-size: 15px;
+    }
+    
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .faq-item {
+        padding: 20px;
+    }
+    
+    .contact-section {
+        padding: 0 10px;
+    }
+    
+    .contact-form {
+        padding: 30px 25px;
+    }
+    
+    .contact-form h4 {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .about-container {
+        padding: 15px 15px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 28px;
+    }
+    
+    .story-section {
+        padding: 20px;
+    }
+    
+    .story-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    
+    .about-image {
+        max-width: 220px;
+    }
+    
+    .mission-card,
+    .vision-card {
+        padding: 20px;
+    }
+    
+    .mission-icon,
+    .vision-icon {
+        font-size: 48px;
+    }
+    
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 20px;
+    }
+    
+    .mission-card p,
+    .vision-card p {
+        font-size: 14px;
+    }
+    
+    .feature-item,
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .feature-icon {
+        font-size: 42px;
+    }
+    
+    .feature-item h4 {
+        font-size: 18px;
+    }
+    
+    .testimonial-text {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .about-container {
+        padding: 15px 12px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 26px;
+    }
+    
+    .page-header .subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .story-section {
+        padding: 20px 15px;
+        border-radius: 20px;
+    }
+    
+    .story-content h2 {
+        font-size: 24px;
+    }
+    
+    .story-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    
+    .about-image {
+        max-width: 240px;
+    }
+    
+    .mission-card,
+    .vision-card {
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+    
+    .mission-icon,
+    .vision-icon {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+    
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 20px;
+    }
+    
+    .mission-card p,
+    .vision-card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .features-section h2,
+    .testimonials-section h2,
+    .faq-section h2,
+    .contact-section h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .feature-item {
+        padding: 20px 15px;
+    }
+    
+    .feature-icon {
+        font-size: 40px;
+    }
+    
+    .feature-item h4 {
+        font-size: 18px;
+    }
+    
+    .feature-item p {
+        font-size: 13px;
+    }
+    
+    .testimonial-card {
+        padding: 20px 15px;
+    }
+    
+    .quote {
+        font-size: 48px;
+        top: 5px;
+        left: 15px;
+    }
+    
+    .testimonial-text {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .faq-item {
+        padding: 18px 15px;
+    }
+    
+    .faq-item h4 {
+        font-size: 16px;
+    }
+    
+    .faq-item p {
+        font-size: 13px;
+    }
+    
+    .contact-form {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+    
+    .contact-form h4 {
+        font-size: 18px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .submit-btn {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 380px) {
+    .about-container {
+        padding: 12px 10px 25px;
+    }
+    
+    .page-header h1 {
+        font-size: 22px;
+    }
+    
+    .page-header .subtitle {
+        font-size: 13px;
+    }
+    
+    .story-section {
+        padding: 15px 12px;
+    }
+    
+    .story-content h2 {
+        font-size: 20px;
+    }
+    
+    .story-content p {
+        font-size: 13px;
+    }
+    
+    .about-image {
+        max-width: 180px;
+    }
+    
+    .mission-card,
+    .vision-card {
+        padding: 15px 12px;
+    }
+    
+    .mission-icon,
+    .vision-icon {
+        font-size: 40px;
+    }
+    
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 18px;
+    }
+    
+    .mission-card p,
+    .vision-card p {
+        font-size: 13px;
+    }
+    
+    .feature-item {
+        padding: 15px 12px;
+    }
+    
+    .feature-icon {
+        font-size: 36px;
+    }
+    
+    .feature-item h4 {
+        font-size: 16px;
+    }
+    
+    .feature-item p {
+        font-size: 12px;
+    }
+    
+    .testimonial-card {
+        padding: 15px 12px;
+    }
+    
+    .testimonial-text {
+        font-size: 13px;
+    }
+    
+    .faq-item {
+        padding: 15px 12px;
+    }
+    
+    .faq-item h4 {
+        font-size: 15px;
+    }
+    
+    .faq-item p {
+        font-size: 12px;
+    }
+    
+    .contact-form {
+        padding: 20px 15px;
+    }
+    
+    .contact-form h4 {
+        font-size: 16px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+    
+    .submit-btn {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Very Small Mobile */
+@media screen and (max-width: 320px) {
+    .page-header h1 {
+        font-size: 20px;
+    }
+    
+    .story-content h2 {
+        font-size: 18px;
+    }
+    
+    .about-image {
+        max-width: 150px;
+    }
+    
+    .mission-icon,
+    .vision-icon {
+        font-size: 36px;
+    }
+    
+    .mission-card h3,
+    .vision-card h3 {
+        font-size: 16px;
+    }
+    
+    .feature-icon {
+        font-size: 32px;
+    }
+    
+    .feature-item h4 {
+        font-size: 15px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 12px;
+    }
+}
+
+/* Fix for devices with notches */
+@supports (padding: max(0px)) {
+    .about-container {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+        padding-bottom: max(50px, env(safe-area-inset-bottom));
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .story-section,
+    .mission-card,
+    .vision-card,
+    .feature-item,
+    .testimonial-card,
+    .faq-item,
+    .contact-form {
+        border-width: 1px;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .mission-card,
+    .vision-card,
+    .feature-item,
+    .testimonial-card,
+    .faq-item,
+    .submit-btn,
+    .contact-form input,
+    .contact-form textarea {
+        transition: none;
+    }
+    
+    .mission-card:hover,
+    .vision-card:hover,
+    .feature-item:hover,
+    .testimonial-card:hover,
+    .faq-item:hover {
+        transform: none;
+    }
+}

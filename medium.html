@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Medium Puzzle - PuzzleWorld</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/medium.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">🧩 <span class="logo-text">PuzzleWorld</span></a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+
+            <!-- Dropdown -->
+            <div class="dropdown active">
+                <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+                <label for="dropdown-toggle" class="dropbtn">
+                    <span>Play Game</span>
+                    <span class="arrow">▾</span>
+                </label>
+                <div class="dropdown-content">
+                    <a href="easy.html">Easy</a>
+                    <a href="medium.html" class="active">Medium</a>
+                    <a href="hard.html">Hard</a>
+                </div>
+            </div>
+
+            <a href="howtoplay.html">How to Play</a>
+            <a href="settings.html">Settings</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <!-- Game Section -->
+    <section class="medium-container">
+        <div class="game-header">
+            <div class="header-left"></div>
+            <div class="title-wrapper">
+                <h1>🔷 Medium Puzzle · 4x4</h1>
+            </div>
+            <div class="game-stats-right">
+                <div class="stat-box">
+                    <span class="stat-label">⏱️ Time</span>
+                    <span id="timer">00:00</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">🔄 Moves</span>
+                    <span id="moveCount">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="message">🔷 Place the pieces to complete the puzzle</div>
+        
+        <div class="game-controls">
+            <button onclick="resetGame()" class="control-btn">🔄 New Game</button>
+            <button onclick="pauseGame()" id="pauseBtn" class="control-btn">⏸️ Pause</button>
+            <button id="hintBtn" class="control-btn hint-btn">💡 Hint (3)</button>
+        </div>
+
+        <div class="game-board-wrapper">
+            <div id="board"></div>
+        </div>
+        
+        <div id="tray"></div>
+
+        <!-- Pause Overlay -->
+        <div id="pauseOverlay" class="pause-overlay" style="display: none;">
+            <div class="pause-content">
+                <h2>⏸️ Game Paused</h2>
+                <p>Time: <span id="pausedTime">00:00</span></p>
+                <p>Moves: <span id="pausedMoves">0</span></p>
+                <button onclick="resumeGame()" class="control-btn">▶️ Resume</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="footer-bottom">
+            © 2026 PuzzleWorld
+        </div>
+    </footer>
+
+    <script src="js/settings.js"></script>
+    <script src="js/medium.js"></script>
+</body>
+</html>

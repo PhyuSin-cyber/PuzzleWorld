@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>PuzzleWorld - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>">
+</head>
+<body>
+
+<!-- Navigation -->
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html">🧩 <span class="logo-text">PuzzleWorld</span></a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+
+        <!-- Dropdown -->
+        <div class="dropdown">
+            <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+            <label for="dropdown-toggle" class="dropbtn">
+                <span>Play Game</span>
+                <span class="arrow">▾</span>
+            </label>
+            <div class="dropdown-content">
+                <a href="easy.html">Easy</a>
+                <a href="medium.html">Medium</a>
+                <a href="hard.html">Hard</a>
+            </div>
+        </div>
+
+        <a href="howtoplay.html">How to Play</a>
+        <a href="settings.html">Settings</a>
+        <a href="statistics.html">Statistics</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">🧩 Welcome to PuzzleWorld</h1>
+        <p class="hero-subtitle">Solve beautiful jigsaw puzzles and challenge your skills.</p>
+        <div class="hero-buttons">
+            <a href="easy.html" class="btn btn-primary">Start Playing</a>
+            <a href="howtoplay.html" class="btn btn-secondary">How to Play</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="about.html">About</a>
+    </div>
+    <div class="footer-bottom">
+        © 2026 PuzzleWorld
+    </div>
+</footer>
+
+<script src="js/settings.js"></script>
+<script>
+    // Apply theme on page load
+    (function() {
+        function applyTheme() {
+            let theme = 'original';
+            try {
+                const saved = localStorage.getItem('puzzleworld_settings');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    theme = parsed.theme || 'original';
+                }
+            } catch(e) {
+                theme = 'original';
+            }
+            
+            // Remove both classes first to avoid conflicts
+            document.body.classList.remove('original-theme', 'dark-theme');
+            
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                // Preload dark theme background image
+                const img = new Image();
+                img.src = 'assets/background-dark.png';
+            } else {
+                document.body.classList.add('original-theme');
+            }
+        }
+        
+        applyTheme();
+        
+        // Listen for settings changes
+        window.addEventListener('settingsChanged', function(e) {
+            if (e.detail && e.detail.theme) {
+                document.body.classList.remove('original-theme', 'dark-theme');
+                if (e.detail.theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                } else {
+                    document.body.classList.add('original-theme');
+                }
+            }
+        });
+        
+        // Listen for storage events (when settings change in another tab)
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'puzzleworld_settings') {
+                try {
+                    const newSettings = JSON.parse(e.newValue);
+                    if (newSettings && newSettings.theme) {
+                        document.body.classList.remove('original-theme', 'dark-theme');
+                        if (newSettings.theme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                        } else {
+                            document.body.classList.add('original-theme');
+                        }
+                    }
+                } catch(err) {
+                    console.error('Error parsing storage event:', err);
+                }
+            }
+        });
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+/* Hero Section */
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px - 100px);
+    padding: 40px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+/* Original Theme Hero Section */
+body.original-theme .hero-section {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Dark Theme Hero Section */
+body.dark-theme .hero-section {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+    animation: fadeInUp 1s ease;
+}
+
+/* Original Theme Hero Content */
+body.original-theme .hero-title {
+    color: #f5d7a1;
+}
+
+body.original-theme .hero-subtitle {
+    color: #faedcd;
+}
+
+/* Dark Theme Hero Content */
+body.dark-theme .hero-title {
+    color: #a8dadc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .hero-subtitle {
+    color: #c0c0c0;
+}
+
+.hero-title {
+    font-size: 64px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 0.3s ease;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 45px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Original Theme Buttons */
+body.original-theme .btn-primary {
+    background: #d4a373;
+    color: white;
+    border: 1px solid #f5d7a1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.original-theme .btn-primary:hover {
+    background: #c38e5f;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.original-theme .btn-secondary {
+    background: transparent;
+    color: #f5d7a1;
+    border: 2px solid #d4a373;
+}
+
+body.original-theme .btn-secondary:hover {
+    background: rgba(212, 163, 115, 0.2);
+    transform: translateY(-3px);
+    border-color: #f5d7a1;
+}
+
+/* Dark Theme Buttons */
+body.dark-theme .btn-primary {
+    background: #2a2a3e;
+    color: #e0e0e0;
+    border: 1px solid #4a4a6a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .btn-primary:hover {
+    background: #3a3a4e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .btn-secondary {
+    background: transparent;
+    color: #a8dadc;
+    border: 2px solid #4a4a6a;
+}
+
+body.dark-theme .btn-secondary:hover {
+    background: rgba(42, 42, 62, 0.3);
+    transform: translateY(-3px);
+    border-color: #a8dadc;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large Desktop */
+@media screen and (max-width: 1200px) {
+    .hero-title {
+        font-size: 58px;
+    }
+    
+    .hero-subtitle {
+        font-size: 22px;
+        max-width: 650px;
+    }
+    
+    .btn {
+        padding: 15px 40px;
+        font-size: 19px;
+    }
+}
+
+/* Desktop */
+@media screen and (max-width: 992px) {
+    .hero-section {
+        min-height: calc(100vh - 70px - 90px);
+        padding: 35px 20px;
+    }
+    
+    .hero-title {
+        font-size: 52px;
+        white-space: normal;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+        margin-bottom: 35px;
+        max-width: 600px;
+    }
+    
+    .btn {
+        padding: 14px 38px;
+        font-size: 18px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        min-height: calc(100vh - 65px - 80px);
+        padding: 30px 15px;
+    }
+    
+    .hero-title {
+        font-size: 46px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+        margin-bottom: 30px;
+        padding: 0 15px;
+        max-width: 500px;
+    }
+    
+    .hero-buttons {
+        gap: 20px;
+    }
+    
+    .btn {
+        padding: 12px 35px;
+        font-size: 17px;
+    }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 600px) and (orientation: landscape) {
+    .hero-section {
+        min-height: calc(100vh - 60px - 70px);
+        padding: 25px 15px;
+    }
+    
+    .hero-title {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 25px;
+        max-width: 450px;
+    }
+    
+    .hero-buttons {
+        gap: 15px;
+    }
+    
+    .btn {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 600px) and (orientation: portrait) {
+    .hero-section {
+        min-height: calc(100vh - 60px - 70px);
+        padding: 20px 12px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 25px;
+        padding: 0 10px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 220px;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 380px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 15px;
+    }
+    
+    .btn {
+        width: 200px;
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}
+
+/* Very Small Mobile */
+@media screen and (max-width: 320px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .btn {
+        width: 180px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Fix for devices with notches */
+@supports (padding: max(0px)) {
+    .hero-section {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-content {
+        animation: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+}
